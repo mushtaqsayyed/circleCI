@@ -20,5 +20,6 @@ driver.get('http://www.google.com').then(function(){
     driver.getTitle().then(function(title) {
       console.log(title);
       driver.quit();
-    });
-  })
+     });
+  });
+});
