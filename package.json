@@ -1,33 +1,24 @@
+var webdriver = require('selenium-webdriver');
 
-
-
-{
-  "name": "circleci-hello-world-nodejs",
-  "version": "1.0.0",
-  "description": "hello world node.js example app for our Circle-CI tutorial: https://github.com/dwyl/learn-circleci",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "node hello.test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nelsonic/circleci-hello-world-nodejs.git"
-  },
-  "keywords": [
-    "circle-ci",
-    "continuous",
-    "integration",
-    "tutorial"
-  ],
-  "author": "polymath",
-  "license": "GPL-2.0",
-  "bugs": {
-    "url": "https://github.com/nelsonic/circleci-hello-world-nodejs/issues"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "test": "node hello.test.js"
-  },
-  "homepage": "https://github.com/nelsonic/circleci-hello-world-nodejs#readme"
+// Input capabilities
+var capabilities = {
+ 'browserName' : 'iPhone',
+ 'device' : 'iPhone 7',
+ 'realMobile' : 'true',
+ 'os_version' : '10.3',
+ 'browserstack.user' : 'mushtaqsayyed1',
+ 'browserstack.key' : 'NC6Df9KsTAxJAmJArf7C'
 }
+
+var driver = new webdriver.Builder().
+  usingServer('http://hub-cloud.browserstack.com/wd/hub').
+  withCapabilities(capabilities).
+  build();
+
+driver.get('http://www.google.com').then(function(){
+  driver.findElement(webdriver.By.name('q')).sendKeys('BrowserStack\n').then(function(){
+    driver.getTitle().then(function(title) {
+      console.log(title);
+      driver.quit();
+    });
+  })
