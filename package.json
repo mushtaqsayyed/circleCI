@@ -1,9 +1,4 @@
-{
-  "scripts": {
-    "start": "node server.js",
-    "test": "node hello.test.js"
-  }
-},
+
 
 
 {
@@ -29,6 +24,10 @@
   "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/nelsonic/circleci-hello-world-nodejs/issues"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node hello.test.js"
   },
   "homepage": "https://github.com/nelsonic/circleci-hello-world-nodejs#readme"
 }
