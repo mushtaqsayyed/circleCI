@@ -3,7 +3,8 @@
     "start": "node server.js",
     "test": "node hello.test.js"
   }
-}
+},
+
 
 {
   "name": "circleci-hello-world-nodejs",
