@@ -1,25 +1,15 @@
 {
-  "name": "circleci-hello-world-nodejs",
-  "version": "1.0.0",
-  "description": "hello world node.js example app for our Circle-CI tutorial: https://github.com/dwyl/learn-circleci",
-  "main": "server.js",
-  "scripts": {
-    "test": "node test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nelsonic/circleci-hello-world-nodejs.git"
-  },
-  "keywords": [
-    "circle-ci",
-    "continuous",
-    "integration",
-    "tutorial"
-  ],
-  "author": "polymath",
-  "license": "GPL-2.0",
-  "bugs": {
-    "url": "https://github.com/nelsonic/circleci-hello-world-nodejs/issues"
-  },
-  "homepage": "https://github.com/nelsonic/circleci-hello-world-nodejs#readme"
+"name": "learn-travis-namrata",
+"description": "Simple Travis-CI check for JSHint (Code Linting)",
+"author": "your name here :-)",
+"version": "0.0.1",
+"devDependencies": {
+"jshint": "^2.9.6"
+},
+"scripts": {
+"test": "node test.js"
+},
+"dependencies": {
+"selenium-webdriver": "^3.6.0"
+}
 }
